@@ -165,7 +165,7 @@ img {
 .shop-submenu,
 .services-submenu {
     position: fixed;
-    top: calc(var(--unit) * 115);
+    top: calc(var(--unit) * 105);
     background: #FAFAFA;
     width: 50%;
     padding: calc(var(--unit) * 70);
@@ -302,7 +302,7 @@ body.services-submenu-in .services-submenu {
 }
 
 .internal-page {
-    padding-top: calc(var(--unit) * 115);
+    padding-top: calc(var(--unit) * 105);
 }
 
 
@@ -318,11 +318,17 @@ header.ui-header {
     top: 0;
     z-index: 99;
     width: 100%;
-    min-height: calc(var(--unit) * 115);
+    min-height: calc(var(--unit) * 105);
     display: flex;
     align-items: center;
     padding: calc(var(--unit) * 23) calc(var(--unit) * 65);
     justify-content: space-between;
+}
+
+.is-scrolling header.ui-header {
+    min-height: calc(var(--unit) * 60);
+    background-color: #1b1b1b;
+    box-shadow: 0 2px 7px 1px #2f2d2d2e;
 }
 
 .main-logo {
@@ -336,6 +342,12 @@ header.ui-header {
     width: calc(var(--unit) * 257);
     height: calc(var(--unit) * 81);
     bottom: 0;
+}
+
+.is-scrolling header.ui-header .main-logo {
+    width: calc(var(--unit) * 160);
+    height: calc(var(--unit) * 50);
+    bottom: 10px;
 }
 
 .main-logo img {
@@ -393,7 +405,29 @@ header.ui-header {
 
 header.ui-header.light-header {
     background-color: #ffffff;
+}
+
+header.ui-header.light-header::after {
+    content: "";
+    width: 50%;
+    position: absolute;
+    left: calc(var(--unit) * 65);
+    bottom: 0;
     border-bottom: 1px solid rgba(35, 44, 101, 0.31);
+}
+
+header.ui-header.light-header::before {
+    content: "";
+    width: 50%;
+    position: absolute;
+    right: calc(var(--unit) * 65);
+    bottom: 0;
+    border-bottom: 1px solid rgba(35, 44, 101, 0.31);
+}
+
+body.is-scrolling header.ui-header.light-header::before,
+body.is-scrolling header.ui-header.light-header::after {
+    display: none;
 }
 
 header.ui-header.light-header .left-menu>ul>li>a {
@@ -419,6 +453,12 @@ header.ui-header.light-header .main-logo {
     background-color: #FFFFFF;
     z-index: 2;
     padding: 0 calc(var(--unit) * 15);
+}
+
+.is-scrolling header.ui-header.light-header .main-logo {
+    width: calc(var(--unit) * 160);
+    height: calc(var(--unit) * 50);
+    bottom: 10px;
 }
 
 body.internal-page header.ui-header.light-header .main-logo {
@@ -602,6 +642,8 @@ body.internal-page header.ui-header.light-header .main-logo {
 
 .collections-block-content {
     margin-top: calc(var(--unit) * 131);
+    position: sticky;
+    top: 0;
     padding-left: calc(var(--unit) * 21);
 }
 
@@ -1466,7 +1508,7 @@ h2.mp-title {
 /* ------------------ about page --------------- */
 
 .internal-banner {
-    height: calc(100vh - calc(var(--unit) * 115));
+    height: calc(100vh - calc(var(--unit) * 105));
 }
 
 .insider-banner-content {

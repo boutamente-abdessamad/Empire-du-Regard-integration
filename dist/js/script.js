@@ -66,6 +66,52 @@ $(document).ready(() => {
             $('body').removeClass('shop-submenu-in');
             $('body').toggleClass('services-submenu-in');
         } )
+
+        if ($(window).scrollTop() > $('.ui-header').outerHeight()) {
+            $('body').addClass('is-scrolling');
+        } else {
+            $('body').removeClass('is-scrolling');
+        }
+
+         var lastScrollTop = 0;
+        $(window).scroll(function () {
+            var st = $(this).scrollTop();
+            if ($(window).scrollTop() > $('.ui-header').outerHeight() && st<lastScrollTop) {
+                $('body').addClass('is-scrolling');
+                $('header').removeClass('d-none');
+                if ($('.collections-block-content').length) {
+                    $('.collections-block-content').css({
+                        top : "90px"
+                    });
+                }
+            } else if($(window).scrollTop() > $('.ui-header').outerHeight() && st> lastScrollTop) {
+                $('body').removeClass('is-scrolling');
+                $('header').addClass('d-none');
+                if ($('.collections-block-content').length) {
+                    $('.collections-block-content').css({
+                        top : "0px"
+                    });
+                }
+            }else if($(window).scrollTop() > $('.ui-header').outerHeight() && st<lastScrollTop) {
+                $('body').addClass('is-scrolling');
+                $('header').removeClass('d-none');
+                if ($('.collections-block-content').length) {
+                    $('.collections-block-content').css({
+                        top : "90px"
+                    });
+                }
+            }else{
+                $('body').removeClass('is-scrolling');
+                $('header').removeClass('d-none');
+                if ($('.collections-block-content').length) {
+                      $('.collections-block-content').css({
+                          top : "90px"
+                      });
+                }
+            }
+            lastScrollTop = st;
+        });
+
        
        
 
