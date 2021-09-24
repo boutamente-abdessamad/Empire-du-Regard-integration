@@ -1,0 +1,2082 @@
+/* ---------------------------------------------------------------------------- */
+
+
+/* -------------------------------- Main  STYLES ----------------------------- */
+
+
+/* ---------------------------------------------------------------------------- */
+
+
+/*--------------------- Fonts ----------------*/
+
+
+/* Inter */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* popins  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Roboto  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*-------------- End Fonts -------------------*/
+
+
+/*======================= Global classes  =======================*/
+
+:root {
+    --unit: 0.065vw;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn {
+    padding: 0;
+    box-shadow: none;
+}
+
+.desc-block,
+.desc-block p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 29);
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.desc-block p:not(:last-child) {
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+.desc-block.text-light p {
+    color: #FFFFFF;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.ui-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ui-btn {
+    padding: calc(var(--unit) * 13) calc(var(--unit) * 80);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: none;
+    transition: .5s all cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.ui-btn-light {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.ui-btn-light:hover,
+.ui-btn-light:active,
+.ui-btn-light:focus {
+    background: #000000;
+    color: #FFFFFF;
+    outline: 1px solid #FFFFFF;
+}
+
+.ui-btn-dark {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.ui-btn-dark:hover,
+.ui-btn-dark:active,
+.ui-btn-dark:focus {
+    background: #FFFFFF;
+    color: #000000;
+    outline: 1px solid #000000;
+}
+
+
+/* product box  */
+
+.product-box img {
+    height: calc(var(--unit) * 352);
+    width: 100%;
+    margin-bottom: calc(var(--unit) * 20);
+    border: 1px solid rgba(0, 0, 0, 0.31);
+}
+
+.products .product-box img {
+    height: calc(var(--unit) * 480);
+    border: 1px solid #C4C4C4;
+}
+
+.product-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 22);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+}
+
+.products .product-title {
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+.product-price {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 19);
+    line-height: calc(var(--unit) * 21);
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #1B1B1B;
+    margin-bottom: 0;
+}
+
+
+/* ./product box  */
+
+
+/* menu shop  */
+
+.shop-submenu,
+.services-submenu {
+    position: fixed;
+    top: calc(var(--unit) * 115);
+    background: #FAFAFA;
+    width: 50%;
+    padding: calc(var(--unit) * 70);
+    transition: .3s all cubic-bezier(0.65, 0.05, 0.36, 1);
+    transform: translateX(-102%);
+}
+
+body.shop-submenu-in .shop-submenu {
+    transform: translateX(0);
+}
+
+body.services-submenu-in .services-submenu {
+    transform: translateX(0);
+}
+
+.shop-submenu>ul {
+    padding: 0px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.shop-submenu>ul>li>a {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 37);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #384454;
+    padding: calc(var(--unit) * 20) 0px;
+}
+
+.shop-submenu>ul>li>a i {
+    margin-left: calc(var(--unit) * 15);
+    color: #384454;
+    transition: .1s all ease-in;
+}
+
+.shop-submenu .has-children.in>a i {
+    transform: rotate(180deg);
+}
+
+.shop-submenu>ul>li>ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+    transition: .3s all ease-in;
+    list-style-type: none;
+    margin-bottom: calc(var(--unit) * 30);
+    border-bottom: 1px solid rgba(196, 196, 196, 0.75);
+    display: none;
+    padding-right: calc(var(--unit) * 50);
+}
+
+.shop-submenu .has-children.in ul {
+    display: inline-flex;
+}
+
+.shop-submenu>ul>li>ul>li>a {
+    font-family: Inter;
+    font-style: normal;
+    padding: calc(var(--unit) * 10) 0px;
+    font-weight: 500;
+    display: block;
+    font-size: calc(var(--unit) * 12);
+    line-height: calc(var(--unit) * 37);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #384454;
+}
+
+.shop-submenu>ul>li>ul>li:not(:last-child)>a {
+    padding-right: calc(var(--unit) * 75);
+}
+
+
+/* menu shop  */
+
+
+/* menu services  */
+
+.services-submenu>h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 33);
+    display: inline-flex;
+    line-height: calc(var(--unit) * 37);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #384454;
+    border-bottom: 1px solid rgba(196, 196, 196, 0.75);
+    padding-bottom: calc(var(--unit) * 30);
+    margin-bottom: calc(var(--unit) * 30);
+    padding-right: calc(var(--unit) * 50);
+}
+
+.services-submenu ul>li:not(:last-child) {
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+.services-submenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-submenu ul>li>a p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 33);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #384454;
+    margin-bottom: 0;
+}
+
+.services-submenu ul>li>a h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 21);
+    line-height: calc(var(--unit) * 33);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #384454;
+    margin-bottom: 0;
+}
+
+.internal-page {
+    padding-top: calc(var(--unit) * 115);
+}
+
+
+/* ======================./Global classes ======================= */
+
+
+/* header  */
+
+header.ui-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    min-height: calc(var(--unit) * 115);
+    display: flex;
+    align-items: center;
+    padding: calc(var(--unit) * 23) calc(var(--unit) * 65);
+    justify-content: space-between;
+}
+
+.main-logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: calc(var(--unit) * 257);
+    height: calc(var(--unit) * 81);
+    bottom: 0;
+}
+
+.main-logo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.left-menu>ul>li>a {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc(var(--unit) * 13);
+    line-height: calc(var(--unit) * 27);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.09em;
+    padding: 0 calc(var(--unit) * 22);
+    color: #FFFFFF;
+}
+
+.left-menu>ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 0 calc(var(--unit) * -22);
+    align-items: center;
+}
+
+.right-menu>ul>li>a {
+    padding: 0 calc(var(--unit) * 16);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 11);
+    line-height: calc(var(--unit) * 27);
+    color: #FFFFFF;
+}
+
+.right-menu>ul>li>a img {
+    width: calc(var(--unit) * 19);
+    height: calc(var(--unit) * 19);
+}
+
+.right-menu>ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 0 calc(var(--unit) * -16);
+    align-items: center;
+}
+
+
+/* light  */
+
+header.ui-header.light-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(35, 44, 101, 0.31);
+}
+
+header.ui-header.light-header .left-menu>ul>li>a {
+    color: #384454;
+}
+
+header.ui-header.light-header a.main-logo img {
+    filter: brightness(0.3);
+}
+
+header.ui-header.light-header .right-menu>ul>li>a img {
+    filter: brightness(0.3);
+}
+
+header.ui-header.light-header .right-menu>ul>li>a {
+    color: #384454;
+}
+
+header.ui-header.light-header .main-logo {
+    width: calc(var(--unit) * 272);
+    height: calc(var(--unit) * 81);
+    bottom: -2px;
+    background-color: #FFFFFF;
+    z-index: 2;
+    padding: 0 calc(var(--unit) * 15);
+}
+
+body.internal-page header.ui-header.light-header .main-logo {
+    bottom: auto;
+}
+
+
+/* header  */
+
+
+/* footer  */
+
+.ui-footer {
+    background: #1B1B1B;
+    padding: calc(var(--unit) * 64) 0px;
+}
+
+.ui-footer h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: calc(var(--unit) * 15);
+}
+
+.footer-infos p,
+.footer-infos a {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    display: flex;
+    letter-spacing: 0.07em;
+    color: #FFFFFF;
+}
+
+.media-social {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0 calc(var(--unit) * -8);
+    margin-top: calc(var(--unit) * 26);
+    justify-content: center;
+    padding: 0;
+}
+
+.media-social li {
+    padding: 0 calc(var(--unit) * 8);
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: calc(var(--unit) * 206);
+    height: calc(var(--unit) * 63);
+}
+
+.footer-payment-way {
+    text-align: right;
+}
+
+.footer-payment-way img {
+    width: 1calc(var(--unit) * 27);
+    height: calc(var(--unit) * 33);
+}
+
+
+/* footer  */
+
+
+/* ------------------- home page ---------------- */
+
+.home-banner {
+    width: 100%;
+    height: 100vh;
+}
+
+.home-banner .ui-btn {
+    margin: 0;
+    margin-top: calc(var(--unit) * 41);
+}
+
+.home-banner-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 63);
+    line-height: calc(var(--unit) * 73);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-bottom: calc(var(--unit) * 15);
+}
+
+.home-banner-content p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 19);
+    line-height: calc(var(--unit) * 31);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+
+/* collections */
+
+.collection-box {
+    height: calc(var(--unit) * 471);
+    display: flex;
+    align-items: flex-end;
+    padding: calc(var(--unit) * 30);
+}
+
+.collection-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.collection-footer h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 21);
+    line-height: calc(var(--unit) * 53);
+    align-items: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.collection-footer img {
+    width: calc(var(--unit) * 25);
+    height: calc(var(--unit) * 25);
+}
+
+.collection-box {
+    position: relative;
+}
+
+.collection-box::after {
+    right: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    top: 0;
+    background: linear-gradient(180deg, rgba(56, 68, 84, 0) 47.97%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.home-collections {
+    margin-top: calc(var(--unit) * 72);
+}
+
+.collections-row [class*="col-"]:nth-child(2) {
+    margin-top: calc(calc(var(--unit) * 107) + var(--bs-gutter-y));
+}
+
+.collections-row [class*="col-"]:nth-child(3) {
+    margin-top: calc( calc(var(--unit) * 107 *-1) + var( --bs-gutter-y));
+}
+
+.collections-block-content {
+    margin-top: calc(var(--unit) * 131);
+    padding-left: calc(var(--unit) * 21);
+}
+
+.collections-block-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 51);
+    letter-spacing: 0.05em;
+    color: #1B1B1B;
+    margin-bottom: calc(var(--unit) * 34);
+}
+
+.collections-block-desc p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 29);
+    letter-spacing: 0.05em;
+    color: rgba(56, 68, 84, 0.65);
+    margin-bottom: 0;
+}
+
+.collections-block-desc {
+    padding-bottom: calc(var(--unit) * 50);
+}
+
+.collections-row {
+    padding-right: calc(var(--unit) * 21);
+}
+
+
+/* best sellers */
+
+.best-sellers {
+    margin-top: calc(var(--unit) * 181);
+}
+
+.bs-slider {
+    display: none;
+    overflow: hidden;
+    padding-left: calc(var(--unit) * 22);
+}
+
+.bs-slider-dots {
+    padding-left: calc(var(--unit) * 22);
+}
+
+.bs-slider .slick-slide {
+    margin: 0 calc(var(--unit) * 22);
+}
+
+.bs-slider .slick-list {
+    margin: 0 -calc(var(--unit) * 22);
+}
+
+.best-sellers-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 51);
+    letter-spacing: 0.05em;
+    color: #1B1B1B;
+    margin-bottom: calc(var(--unit) * 35);
+}
+
+.bs-desc,
+.bs-desc p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 29);
+    letter-spacing: 0.05em;
+    color: rgba(56, 68, 84, 0.65);
+    margin-bottom: 0;
+}
+
+.bs-desc {
+    margin-bottom: calc(var(--unit) * 54);
+}
+
+.bs-slider-actions a {
+    width: calc(var(--unit) * 87);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    height: calc(var(--unit) * 87);
+    border: 1px solid rgba(56, 68, 84, 0.45);
+}
+
+.bs-slider-actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--unit) * 76);
+}
+
+.bs-next>img {
+    transform: rotate(180deg);
+}
+
+.bs-slider-actions a img {
+    width: calc(var(--unit) * 27);
+    height: calc(var(--unit) * 27);
+}
+
+.bs-prev {
+    margin-right: calc(var(--unit) * 24);
+}
+
+.best-sellers-content .ui-btn {
+    padding: calc(var(--unit) * 10) calc(var(--unit) * 75);
+}
+
+.best-sellers .slick-dots {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.best-sellers .slick-dots li button:before {
+    background-color: rgba(196, 196, 196, 0.75);
+    width: 100%;
+    height: 1px;
+    content: '';
+    opacity: 1;
+}
+
+.best-sellers .slick-dots li.slick-active button:before {
+    height: 2px;
+    background-color: #000000;
+    opacity: 1;
+    top: -1px;
+}
+
+.best-sellers .slick-dots li button {
+    width: 100%;
+    height: 1px;
+    padding: 0;
+}
+
+.best-sellers .slick-dots li {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height: 1px;
+}
+
+.best-sellers-content {
+    padding-right: calc(var(--unit) * 60);
+}
+
+
+/* dermopigmentation */
+
+.dermopigmentation-warpper {
+    margin-top: calc(var(--unit) * 180);
+}
+
+.dermopigmentation-warpper {
+    background-size: 37.5% 100% !important;
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+    padding: calc(var(--unit) * 66) 0;
+}
+
+.dermopigmentation-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 53);
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+.dermopigmentation-content p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 29);
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.dermopigmentation-content ul li .item-icon {
+    width: calc(var(--unit) * 105);
+    height: calc(var(--unit) * 105);
+    border: 2px solid rgba(196, 196, 196, 0.39);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: calc(var(--unit) * 10);
+}
+
+.dermopigmentation-content ul {
+    list-style-type: none;
+    margin: calc(var(--unit) * 50) calc(var(--unit) * -22);
+    padding: 0;
+    display: flex;
+}
+
+.dermopigmentation-content ul li {
+    padding: 0 calc(var(--unit) * 22);
+    text-align: center;
+}
+
+.dermopigmentation-content ul li p {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 37);
+}
+
+.item-icon img {
+    width: calc(var(--unit) * 45);
+    height: calc(var(--unit) * 45);
+}
+
+.dermopigmentation-content .ui-btn {
+    padding: calc(var(--unit) * 10) calc(var(--unit) * 75);
+}
+
+
+/* about owner  */
+
+.owner-avatar {
+    text-align: center;
+}
+
+.owner-avatar img {
+    width: calc(var(--unit) * 253);
+    height: calc(var(--unit) * 253);
+    border-radius: 50%;
+}
+
+.about-owner-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-owner-head .ui-btn {
+    padding: calc(var(--unit) * 9) calc(var(--unit) * 65);
+}
+
+.ao-title-warpper h5 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 47);
+    letter-spacing: 0.07em;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.ao-title-warpper h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 47);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+    margin-bottom: 0;
+}
+
+.ao-desc,
+.ao-desc p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 29);
+    text-align: justify;
+    letter-spacing: 0.05em;
+    color: rgba(56, 68, 84, 0.65);
+    margin-bottom: 0;
+}
+
+.ao-desc {
+    padding: calc(var(--unit) * 30) 0px;
+}
+
+.about-owner-footer {
+    display: flex;
+    align-items: center;
+}
+
+.about-owner-footer h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+    margin-bottom: 0;
+    width: 33.29%;
+}
+
+.about-owner-footer ul {
+    display: flex;
+    align-items: center;
+    margin: 0 calc(var(--unit) * -30);
+    padding: 0;
+    list-style-type: none;
+    margin-left: calc(var(--unit) * 55);
+}
+
+.about-owner-footer ul li {
+    display: flex;
+    align-items: center;
+    padding: 0 calc(var(--unit) * 30);
+    position: relative;
+}
+
+.about-owner-footer ul li:not(:last-child):after {
+    content: "";
+    height: calc(var(--unit) * 39);
+    position: absolute;
+    border-right: 1px solid #C4C4C4;
+    right: 0;
+}
+
+.about-owner-footer ul li p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 22);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+    margin-bottom: 0;
+    margin-left: calc(var(--unit) * 18);
+}
+
+.about-owner {
+    padding: calc(var(--unit) * 128) 0px;
+}
+
+
+/* formation */
+
+.formation-warpper {
+    padding: calc(var(--unit) * 100) 0px;
+    text-align: center;
+}
+
+.formation-warpper h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 53);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: calc(var(--unit) * 52);
+}
+
+.formation-warpper p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 21);
+    line-height: calc(var(--unit) * 33);
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: calc(var(--unit) * 50);
+}
+
+.formation-warpper .ui-btn {
+    padding: calc(var(--unit) * 10) calc(var(--unit) * 65);
+}
+
+
+/* instagrame */
+
+.instagrame-feed {
+    padding: calc(var(--unit) * 100) 0;
+}
+
+.insta-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 53);
+    letter-spacing: 0.07em;
+    color: #1B1B1B;
+    text-transform: uppercase;
+    margin-bottom: calc(var(--unit) * 60);
+}
+
+.insta-title span {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 22);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+    padding-left: calc(var(--unit) * 10);
+}
+
+.insta-title img {
+    width: calc(var(--unit) * 42);
+    height: calc(var(--unit) * 42);
+    margin-right: calc(var(--unit) * 20);
+    margin-top: calc(var(--unit) * -11);
+}
+
+.instagram-post {
+    position: relative;
+    display: flex;
+}
+
+.instagram-post::after {
+    content: "";
+    transition: .2s all ease-in;
+    position: absolute;
+    background: url(../../assets/icons/instagram-light.svg), #38445452;
+    opacity: 0;
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: calc(var(--unit) * 28);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.instagram-post:hover::after {
+    opacity: 1;
+}
+
+.instagram-post img {
+    height: calc(var(--unit) * 261);
+    width: 100%;
+}
+
+.aventages-warpper {
+    background: #F9F9F9;
+    padding: calc(var(--unit) * 54) 0px;
+}
+
+.aventage-box {
+    text-align: center;
+}
+
+.aventage-box img {
+    width: calc(var(--unit) * 51);
+    height: calc(var(--unit) * 51);
+}
+
+.aventage-box h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 17);
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #1B1B1B;
+    margin: calc(var(--unit) * 27) 0px;
+}
+
+.aventage-box p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #1B1B1B;
+    margin-bottom: 0;
+}
+
+
+/* ------------------ ./home page --------------- */
+
+
+/* ------------------ Shop page --------------- */
+
+.page-root.shop-page {
+    padding-top: calc(var(--unit) * 95);
+}
+
+.shop-page-head {
+    margin-bottom: calc(var(--unit) * 73);
+    margin-top: calc(var(--unit) * 62);
+}
+
+.shop-page-head .shop-page-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 51);
+    line-height: calc(var(--unit) * 53);
+    text-align: center;
+    letter-spacing: 0.07em;
+    color: #384454;
+    margin: calc(var(--unit) * 25) 0px;
+}
+
+.ui-breadcrumb .breadcrumb-item,
+.ui-breadcrumb .breadcrumb-item a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 13);
+    line-height: calc(var(--unit) * 33);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(35, 44, 101, 0.53);
+}
+
+.ui-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+}
+
+.ui-breadcrumb {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.ui-breadcrumb .breadcrumb {
+    margin: 0;
+}
+
+.shop-page-filters {
+    display: flex;
+    justify-content: center;
+}
+
+.shop-page-head .sort-by {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 13);
+    padding: 0 calc(var(--unit) * 30);
+    display: flex;
+    line-height: calc(var(--unit) * 33);
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    color: #384454;
+}
+
+.shop-page-head .filter-by {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 13);
+    padding: 0 calc(var(--unit) * 30);
+    align-items: center;
+    display: flex;
+    line-height: calc(var(--unit) * 33);
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    color: #384454;
+}
+
+.shop-page-head .sort-by img {
+    margin-left: calc(var(--unit) * 15);
+    width: calc(var(--unit) * 25);
+    height: calc(var(--unit) * 25);
+}
+
+.shop-page-head .filter-by img {
+    margin-left: calc(var(--unit) * 15);
+    width: calc(var(--unit) * 25);
+    height: calc(var(--unit) * 25);
+}
+
+.shop-page-head .dropdown-toggle::after {
+    display: none;
+}
+
+.shop-page .products .row {
+    margin-right: calc(var(--unit) * -42.5);
+    margin-left: calc(var(--unit) * -42.5);
+}
+
+.shop-page .products .row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 42.5);
+    padding-left: calc(var(--unit) * 42.5);
+    margin-bottom: calc(var(--unit) * 85);
+}
+
+.products-warpper {
+    margin-bottom: calc(var(--unit) * 65);
+}
+
+.shop-page-filters .dropdown-item {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 22);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #384454;
+    padding: calc(var(--unit) * 5) calc(var(--unit) * 15);
+}
+
+.shop-page-filters .dropdown-menu.show {
+    padding: calc(var(--unit) * 5) calc(var(--unit) * 15);
+    border: 1px solid #C4C4C4;
+    border-radius: 0;
+    box-shadow: 0 0 11px 0px #4442425e;
+}
+
+.shop-page-filters .dropdown .dropdown-menu .dropdown-item:active {
+    background-color: #FFFFFF;
+}
+
+.shop-page-filters .dropdown-item:focus,
+.shop-page-filters .dropdown-item:hover {
+    color: #ffffff;
+    background-color: #384454;
+}
+
+
+/* ------------------ ./Shop page --------------- */
+
+
+/* ------------------ ./product page --------------- */
+
+.single-product-page {
+    padding-top: calc(var(--unit) * 95);
+}
+
+.single-product-gallery img {
+    height: calc(var(--unit) * 710);
+    width: 100%;
+}
+
+.single-product-warpper .p-category {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 53);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.single-product-warpper .p-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 45);
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.single-product-short-desc p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 27);
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 0;
+}
+
+.single-product-title {
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+.single-product-warpper .single-product-price {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 27);
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin: calc(var(--unit) * 47) 0px;
+}
+
+.single-product-warpper .product-attr {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: calc(var(--unit) * 15);
+}
+
+.single-product-warpper {
+    margin-top: calc(var(--unit) * 50);
+}
+
+.single-product-footer {
+    display: flex;
+    align-items: center;
+    margin-top: calc(var(--unit) * 30);
+}
+
+.product-color {
+    width: calc(var(--unit) * 27);
+    height: calc(var(--unit) * 27);
+    background: #CCA989;
+    border-radius: 50%;
+    margin-left: calc(var(--unit) * 15);
+}
+
+.qte-controller button {
+    display: inline-flex;
+    width: calc(var(--unit) * 55);
+    align-items: center;
+    height: calc(var(--unit) * 55);
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.qte-input {
+    width: calc(var(--unit) * 50);
+    height: calc(var(--unit) * 55);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+}
+
+.qte-controller {
+    margin-right: calc(var(--unit) * 35);
+}
+
+.qte-controller .ui-btn {
+    padding: calc(var(--unit) * 18) calc(var(--unit) * 66);
+}
+
+.shipping-infos {
+    background: rgba(196, 196, 196, 0.09);
+    padding: calc(var(--unit) * 53) 0px;
+}
+
+.shipping-infos-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.shipping-infos-box img {
+    width: calc(var(--unit) * 51);
+    height: calc(var(--unit) * 51);
+    margin-right: calc(var(--unit) * 20);
+}
+
+.sib-details h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 53);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.sib-details p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 23);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 0;
+}
+
+.more-products {
+    padding-top: calc(var(--unit) * 76);
+    padding-bottom: calc(var(--unit) * 98);
+}
+
+h2.mp-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 51);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #384454;
+    margin-bottom: calc(var(--unit) * 56);
+}
+
+.more-products .row {
+    margin-right: calc(var(--unit) * -33);
+    margin-left: calc(var(--unit) * -33);
+}
+
+.more-products .row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 33);
+    padding-left: calc(var(--unit) * 33);
+}
+
+
+/* ------------------ ./product page --------------- */
+
+
+/* ------------------ about page --------------- */
+
+.internal-banner {
+    height: calc(100vh - calc(var(--unit) * 115));
+}
+
+.insider-banner-content {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: calc(var(--unit) * 65);
+}
+
+.insider-banner-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 45);
+    line-height: calc(var(--unit) * 61);
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.about-content-warpper {
+    margin-top: calc(var(--unit) * 91);
+}
+
+.about-avatar img {
+    height: calc(var(--unit) * 512);
+    width: 100%;
+}
+
+.about-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 45);
+    line-height: calc(var(--unit) * 45);
+    letter-spacing: 0.05em;
+    color: #384454;
+}
+
+.about-content h5 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 19);
+    line-height: calc(var(--unit) * 53);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about-desc,
+.about-desc p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 29);
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.about-desc p:not(:last-child) {
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+.about-content-warpper>.container>.row {
+    margin-right: calc(var(--unit) * -42.5);
+    margin-left: calc(var(--unit) * -42.5);
+}
+
+.about-content-warpper>.container>.row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 42.5);
+    padding-left: calc(var(--unit) * 42.5);
+    margin-bottom: calc(var(--unit) * 85);
+}
+
+
+/* ------------------ ./about page --------------- */
+
+
+/* ------------------ contact page --------------- */
+
+.contact-warpper {
+    position: relative;
+    margin-bottom: calc(var(--unit) * 42);
+}
+
+.contact-warpper::after {
+    content: '';
+    background: #FAFAFA;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.contact-form {
+    padding: calc(var(--unit) * 75) 0px calc(var(--unit) * 75) calc(var(--unit) * 75);
+}
+
+.input-warpper input,
+.input-warpper textarea {
+    height: calc(var(--unit) * 56);
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(35, 44, 101, 0.53);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 13);
+    line-height: calc(var(--unit) * 33);
+    letter-spacing: 0.05em;
+    color: #384454;
+    text-indent: calc(var(--unit) * 22);
+}
+
+.input-warpper textarea {
+    height: calc(var(--unit) * 129);
+}
+
+.contact-form .input-warpper:not(:last-child) input {
+    margin-bottom: calc(var(--unit) * 27);
+}
+
+.input-warpper input::placeholder {
+    color: rgba(35, 44, 101, 0.31);
+}
+
+.checkbox-item .checkbox-box {
+    cursor: pointer;
+    width: calc(var(--unit) * 24);
+    height: calc(var(--unit) * 24);
+    background: #FFFFFF;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+}
+
+.checkbox-item .checkbox-box i {
+    opacity: 0;
+}
+
+.checkbox-item .checkbox-box input:checked+i {
+    opacity: 1;
+}
+
+.checkbox-item .checkbox-box input {
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.checkbox-item label:not(.checkbox-box) {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 13);
+    line-height: calc(var(--unit) * 33);
+    letter-spacing: 0.05em;
+    color: #384454;
+    margin-bottom: 0;
+    margin-left: calc(var(--unit) * 22);
+    cursor: pointer;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-right: calc(var(--unit) * 71);
+}
+
+.group-checkboxs {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+.contact-form input.ui-btn {
+    margin-top: calc(var(--unit) * 27);
+    padding: calc(var(--unit) * 13) calc(var(--unit) * 49);
+}
+
+.contact-title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 51);
+    line-height: calc(var(--unit) * 63);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    margin: calc(var(--unit) * 50) 0px;
+}
+
+.contact-infos h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 33);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: calc(var(--unit) * 25);
+}
+
+.contact-infos {
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+.contact-infos a,
+.contact-infos p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 21);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.contact-infos p {
+    margin-bottom: calc(var(--unit) * 10);
+}
+
+
+/* ------------------ ./contact page --------------- */
+
+
+/* ------------------ ./formation page --------------- */
+
+.formation-intro {
+    padding: calc(var(--unit) * 65) 0px;
+}
+
+.formation-img img {
+    height: calc(var(--unit) * 282);
+    width: 100%;
+}
+
+.formations-images {
+    background: rgba(196, 196, 196, 0.09);
+    padding: calc(var(--unit) * 60) 0px;
+}
+
+.certification-warpper {
+    background: #000000;
+    padding: calc(var(--unit) * 80) 0px;
+}
+
+.certification-container {
+    overflow: hidden;
+    border: 1px solid #C4C4C4;
+    padding: calc(var(--unit) * 18);
+    position: relative;
+}
+
+.certification-container [class*="corner-"] {
+    position: absolute;
+    width: calc(var(--unit) * 90);
+    display: block;
+    height: calc(var(--unit) * 90);
+    background: rgb(84 84 84);
+    border: calc(var(--unit) * 33) solid #000000;
+}
+
+.certification-container .corner-1 {
+    left: calc(var(--unit) * -12);
+    top: calc(var(--unit) * -12);
+    border-radius: 0px 0px calc(var(--unit) * 55) 0px;
+}
+
+.certification-container .corner-2 {
+    right: calc(var(--unit) * -12);
+    top: calc(var(--unit) * -12);
+    border-radius: 0px 0px 0px calc(var(--unit) * 55);
+}
+
+.certification-container .corner-3 {
+    left: calc(var(--unit) * -12);
+    bottom: calc(var(--unit) * -12);
+    border-radius: 0px calc(var(--unit) * 55) 0px 0px;
+}
+
+.certification-container .corner-4 {
+    right: calc(var(--unit) * -12);
+    bottom: calc(var(--unit) * -12);
+    border-radius: calc(var(--unit) * 55) 0px 00px 0px;
+}
+
+.certification-content {
+    border: 1px solid rgba(229, 229, 229, 0.42);
+    padding: calc(var(--unit) * 91) calc(var(--unit) * 56);
+    text-align: center;
+}
+
+.certification-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 45);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-bottom: calc(var(--unit) * 40);
+    margin-bottom: calc(var(--unit) * 40);
+    position: relative;
+}
+
+.certification-content h2::after {
+    content: "";
+    width: calc(var(--unit) * 106);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+
+/* ------------------ ./contact page --------------- */
+
+
+/* ------------------ dermopigmentation page --------------- */
+
+.dermopigmentation-block2 {
+    background: rgba(196, 196, 196, 0.09);
+    padding-top: calc(var(--unit) * 84);
+    margin-top: calc(var(--unit) * -42);
+}
+
+.dermo-intro-img img {
+    height: calc(var(--unit) * 368);
+    width: 100%;
+}
+
+.dermopigmentation-intro {
+    margin-top: calc(var(--unit) * 57);
+}
+
+.dermopigmentation-intro .desc-block {
+    padding-right: calc(var(--unit) * 76);
+    margin-top: calc(var(--unit) * 37);
+}
+
+.dermo-block2-intro-img img {
+    height: calc(var(--unit) * 411);
+    width: calc(100% - calc(var(--unit) * 35));
+}
+
+.dermopigmentation-types {
+    padding: calc(var(--unit) * 103) 0px;
+}
+
+.dermopigmentation-type-box {
+    border: 1px solid rgba(196, 196, 196, 0.39);
+    padding: calc(var(--unit) * 40);
+    text-align: center;
+}
+
+.dermopigmentation-type-box img {
+    width: calc(var(--unit) * 93);
+    height: calc(var(--unit) * 93);
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+.dermopigmentation-type-box p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    text-align: center;
+    letter-spacing: 0.11em;
+    color: rgba(27, 27, 27, 0.65);
+    margin-bottom: 0;
+}
+
+.dermopigmentation-type-box h5 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    text-align: center;
+    letter-spacing: 0.11em;
+    color: rgba(27, 27, 27, 0.65);
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+.dermopigmentation-type-box .ui-btn {
+    padding: calc(var(--unit) * 9) calc(var(--unit) * 31);
+}
+
+.dermopigmentation-types-container {
+    padding: 0 calc(var(--unit) * 30);
+}
+
+
+/* ------------------ ./dermopigmentation page --------------- */
+
+
+/* ------------------ dermopigmentation reparatrice page --------------- */
+
+.dermo-reparatrice-intro-img img {
+    height: calc(var(--unit) * 476);
+    width: 100%;
+}
+
+.dr-techniques-title {
+    background: rgba(196, 196, 196, 0.09);
+    padding: calc(var(--unit) * 55.5) 0;
+    margin-top: calc(var(--unit) * -80.6);
+    margin-bottom: calc(var(--unit) * 60);
+}
+
+.dr-techniques-title h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 45);
+    line-height: calc(var(--unit) * 51);
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.dermo-reparatrice-techniques {
+    padding-bottom: calc(var(--unit) * 44);
+}
+
+.dermopigmentation-reparatrice-page .dermopigmentation-intro .desc-block {
+    padding-right: calc(var(--unit) * 76);
+    margin-top: calc(var(--unit) * 10);
+}
+
+.dermo-reparatrice-techniques>.container>.row .desc-block {
+    padding-left: calc(var(--unit) * 88);
+}
+
+.dermo-reparatrice-techniques>.container>.row:nth-child(2n+2) .desc-block {
+    padding-left: 0px;
+    padding-right: calc(var(--unit) * 88);
+}
+
+.dermo-reparatrice-techniques>.container>.row:nth-child(2n+2) {
+    flex-direction: row-reverse;
+}
+
+.dermo-reparatrice-techniques>.container>.row {
+    align-items: center;
+    margin-bottom: calc(var(--unit) * 60);
+}
+
+.dermo-reparatrice-technique-title {
+    background: #000000;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    padding: calc(var(--unit) * 88) calc(var(--unit) * 45);
+    text-align: center;
+}
+
+.dermo-reparatrice-technique-title h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 23);
+    line-height: calc(var(--unit) * 37);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+
+/* ------------------ ./dermopigmentation reparatrice page --------------- */
+
+
+/* ------------------ dermopigmentation sourcils page --------------- */
+
+.dermopigmentation-des-sourcils-page .dermopigmentation-intro .desc-block {
+    margin-top: calc(var(--unit) * 5);
+}
+
+.dermo-sourcils-intro-img img {
+    height: calc(var(--unit) * 356);
+    width: 100%;
+}
+
+.dermopigmentation-des-sourcils-page .dr-techniques-title {
+    margin-top: calc(var(--unit) * -161.2);
+}
+
+.dr-techniques-deac {
+    margin-bottom: calc(var(--unit) * 60);
+}
+
+.dermopigmentation-sourcils-block-3 {
+    background: rgba(196, 196, 196, 0.09);
+    padding: calc(var(--unit) * 50) 0;
+}
+
+.d-sourcils-b3-content h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 51);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: calc(var(--unit) * 24);
+}
+
+.dermopigmentation-sourcils-block-3>.container>.row {
+    align-items: center;
+    margin-right: calc(var(--unit) * -50);
+    margin-left: calc(var(--unit) * -50);
+}
+
+.dermopigmentation-sourcils-block-3>.container>.row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 50);
+    padding-left: calc(var(--unit) * 50);
+}
+
+.dermopigmentation-before-after {
+    padding: calc(var(--unit) * 76) 0px;
+}
+
+.dermopigmentation-change-box {
+    height: calc(var(--unit) * 410);
+    width: 100%;
+    position: relative;
+}
+
+.dermopigmentation-change-box span {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 51);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    margin-bottom: 0;
+    width: calc(var(--unit) * 109);
+    height: calc(var(--unit) * 109);
+    left: calc(var(--unit) * 46);
+    bottom: calc(var(--unit) * -37);
+    background: #000000;
+    border-radius: 50%;
+}
+
+.dermopigmentation-before-after>.container>.row {
+    margin-right: calc(var(--unit) * -50);
+    margin-left: calc(var(--unit) * -50);
+}
+
+.dermopigmentation-before-after>.container>.row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 50);
+    padding-left: calc(var(--unit) * 50);
+}
+
+.dermopigmentation-before-after .desc-block {
+    margin-top: calc(var(--unit) * 98);
+}
+
+
+/* ------------------ ./dermopigmentation reparatrice page --------------- */
+
+
+/* ------------------ dermopigmentation yeux page --------------- */
+
+.dermopigmentation-yeux-page .dermopigmentation-intro .desc-block {
+    margin-top: calc(var(--unit) * 10);
+}
+
+.dermopigmentation-yeux-page .dr-techniques-title {
+    margin-top: calc(var(--unit) * -112.6);
+}
+
+
+/* ------------------ ./dermopigmentation yeux page --------------- */
+
+
+/* ------------------ ./dermopigmentation levres page --------------- */
+
+.dermopigmentation-levres-page .dermopigmentation-intro .desc-block {
+    margin-top: calc(var(--unit) * 10);
+}
+
+.dermopigmentation-levres-page .dr-techniques-title {
+    margin-top: calc(var(--unit) * -161.2);
+}
+
+
+/* ------------------ ./dermopigmentation levres page --------------- */
