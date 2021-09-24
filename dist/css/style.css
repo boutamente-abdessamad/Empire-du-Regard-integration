@@ -116,6 +116,11 @@ img {
 
 /* product box  */
 
+.product-box {
+    position: relative;
+    display: block;
+}
+
 .product-box img {
     height: calc(var(--unit) * 352);
     width: 100%;
