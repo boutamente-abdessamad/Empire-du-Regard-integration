@@ -27,7 +27,33 @@ $(document).ready(() => {
                 slidesToScroll: 1,
                 arrows: false,
                 appendDots: $('.bs-slider-dots'),
-                fade: false
+                fade: false,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                    breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                        settings: {
+                            centerMode: true,
+                            infinite: true,
+                            centerPadding: '60px',
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
             $('.bs-prev').click(function (e) {
                 e.preventDefault();
@@ -79,7 +105,7 @@ $(document).ready(() => {
             if ($(window).scrollTop() > $('.ui-header').outerHeight() && st<lastScrollTop) {
                 $('body').addClass('is-scrolling');
                 $('header').removeClass('d-none');
-                if ($('.collections-block-content').length) {
+                if ($('.collections-block-content').length && !$('body.ui-mobile').length) {
                     $('.collections-block-content').css({
                         top : "90px"
                     });
@@ -87,7 +113,7 @@ $(document).ready(() => {
             } else if($(window).scrollTop() > $('.ui-header').outerHeight() && st> lastScrollTop) {
                 $('body').removeClass('is-scrolling');
                 $('header').addClass('d-none');
-                if ($('.collections-block-content').length) {
+                if ($('.collections-block-content').length && !$('body.ui-mobile').length) {
                     $('.collections-block-content').css({
                         top : "0px"
                     });
@@ -95,7 +121,7 @@ $(document).ready(() => {
             }else if($(window).scrollTop() > $('.ui-header').outerHeight() && st<lastScrollTop) {
                 $('body').addClass('is-scrolling');
                 $('header').removeClass('d-none');
-                if ($('.collections-block-content').length) {
+                if ($('.collections-block-content').length && !$('body.ui-mobile').length) {
                     $('.collections-block-content').css({
                         top : "90px"
                     });
@@ -103,7 +129,7 @@ $(document).ready(() => {
             }else{
                 $('body').removeClass('is-scrolling');
                 $('header').removeClass('d-none');
-                if ($('.collections-block-content').length) {
+                if ($('.collections-block-content').length && !$('body.ui-mobile').length) {
                       $('.collections-block-content').css({
                           top : "90px"
                       });

@@ -61,7 +61,12 @@
 
 /* small mobiles  */
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .container {
+        padding-right: calc(var(--unit) * 26);
+        padding-left: calc(var(--unit) * 26);
+    }
+}
 
 
 /* ./small mobiles  */

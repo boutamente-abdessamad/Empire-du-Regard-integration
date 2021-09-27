@@ -1,0 +1,668 @@
+/* ---------------------------------------------------------------------------- */
+
+
+/* -------------------------------- Mobile  STYLES ---------------------------- */
+
+
+/* ---------------------------------------------------------------------------- */
+
+
+/*======================= Global classes  =======================*/
+
+:root {
+    --unit: 0.24132vw;
+}
+
+.container {
+    padding-right: calc(var(--unit) * 30);
+    padding-left: calc(var(--unit) * 30);
+}
+
+
+/*======================= ./Global classes  =======================*/
+
+
+/* header  */
+
+body.ui-mobile header.ui-header {
+    min-height: auto;
+    padding: calc(var(--unit) * 26) calc(var(--unit) * 26);
+}
+
+body.ui-mobile .main-logo {
+    width: calc(var(--unit) * 206);
+    height: calc(var(--unit) * 73);
+    bottom: calc(var(--unit) * -75);
+}
+
+
+/*---------- home -------- */
+
+
+/* banner  */
+
+body.ui-mobile .home-banner-content h2 {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 43);
+    justify-content: center;
+    text-align: center;
+}
+
+body.ui-mobile .home-banner-content p {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 31);
+    justify-content: center;
+    text-align: center;
+}
+
+body.ui-mobile .home-banner-content {
+    text-align: center;
+    padding-bottom: calc(var(--unit) * 82);
+}
+
+body.ui-mobile .home-banner .ui-btn {
+    margin: 0;
+    margin-top: calc(var(--unit) * 140);
+}
+
+
+/* collections */
+
+body.ui-mobile .home-collections {
+    margin-top: 0;
+}
+
+body.ui-mobile .collections-block-content {
+    margin-top: calc(var(--unit) * 30);
+    position: relative;
+    top: 0;
+    padding-left: 0;
+}
+
+body.ui-mobile .collections-block-content h2 {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 43);
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .collections-block-desc p {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 25);
+}
+
+body.ui-mobile .collection-box {
+    height: calc(var(--unit) * 221);
+    padding: calc(var(--unit) * 15);
+}
+
+body.ui-mobile .collection-footer h3 {
+    font-size: calc(var(--unit) * 13);
+    line-height: calc(var(--unit) * 28);
+}
+
+body.ui-mobile .collection-footer img {
+    width: calc(var(--unit) * 12);
+    height: calc(var(--unit) * 12);
+}
+
+body.ui-mobile .collections-block-content .ui-btn {
+    width: 100%;
+    letter-spacing: 0.13em;
+}
+
+body.ui-mobile .bs-slider {
+    padding-left: 0;
+    width: 100%;
+}
+
+body.ui-mobile .best-sellers-content {
+    padding-right: 0;
+    padding: 0 calc(var(--unit) * 30);
+}
+
+body.ui-mobile .bs-slider-dots {
+    padding-left: 0;
+    padding: 0 calc(var(--unit) * 30);
+    margin-bottom: calc(var(--unit) * 50);
+}
+
+body.ui-mobile .bs-slider-actions {
+    justify-content: center;
+    margin-bottom: calc(var(--unit) * 50);
+}
+
+body.ui-mobile .best-sellers-content .ui-btn {
+    width: 100%;
+}
+
+body.ui-mobile .dermopigmentation-content-img img {
+    height: calc(var(--unit) * 368);
+    width: 100%;
+}
+
+body.ui-mobile .dermopigmentation-warpper {
+    margin-top: calc(var(--unit) * 75);
+    padding-top: 0;
+}
+
+body.ui-mobile .dermopigmentation-content ul li {
+    margin-bottom: calc(var(--unit) * 42);
+}
+
+body.ui-mobile .dermopigmentation-content ul {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: calc(var(--unit) * 8);
+}
+
+body.ui-mobile .dermopigmentation-content .ui-btn {
+    width: 100%;
+}
+
+body.ui-mobile .dermopigmentation-content {
+    padding-top: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .dermopigmentation-content h2 {
+    font-size: calc(var(--unit) * 33);
+}
+
+body.ui-mobile .dermopigmentation-content p {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 25);
+}
+
+body.ui-mobile .about-owner-footer ul li img {
+    width: calc(var(--unit) * 45);
+    height: calc(var(--unit) * 45);
+    margin-bottom: calc(var(--unit) * 10);
+}
+
+body.ui-mobile .about-owner-footer {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+body.ui-mobile .about-owner-footer h2 {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 27);
+    width: 100%;
+    text-align: center;
+}
+
+body.ui-mobile .about-owner-footer ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 0;
+    padding-top: 30px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+body.ui-mobile .about-owner-footer ul li {
+    padding: 0 calc(var(--unit) * 20);
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.ui-mobile .about-owner-footer ul li p {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 22);
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+body.ui-mobile .about-owner-footer ul li:not(:last-child):after {
+    height: calc(var(--unit) * 65);
+}
+
+body.ui-mobile .about-owner {
+    padding: calc(var(--unit) * 51) 0px;
+}
+
+body.ui-mobile .owner-avatar img {
+    width: calc(var(--unit) * 215);
+    height: calc(var(--unit) * 215);
+}
+
+body.ui-mobile .owner-avatar {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+body.ui-mobile .ao-title-warpper {
+    text-align: center;
+}
+
+body.ui-mobile .about-owner-head {
+    justify-content: center;
+}
+
+body.ui-mobile .ao-title-warpper h5 {
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 42);
+}
+
+body.ui-mobile .ao-title-warpper h2 {
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 41);
+}
+
+body.ui-mobile .ao-desc,
+body.ui-mobile .ao-desc p {
+    text-align: center;
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 25);
+}
+
+body.ui-mobile .about-owner-head .ui-btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+body.ui-mobile .formation-warpper h2 {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 53);
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+body.ui-mobile .formation-warpper p {
+    font-size: calc(var(--unit) * 19);
+    line-height: calc(var(--unit) * 31);
+    margin-bottom: calc(var(--unit) * 93);
+}
+
+body.ui-mobile .formation-warpper .ui-btn {
+    width: 100%;
+}
+
+body.ui-mobile .formation-warpper {
+    padding-bottom: calc(var(--unit) * 30);
+    padding-top: calc(var(--unit) * 123);
+}
+
+body.ui-mobile .instagrame-feed {
+    padding: calc(var(--unit) * 64) 0;
+    padding-bottom: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .insta-title img {
+    width: calc(var(--unit) * 34);
+    height: calc(var(--unit) * 34);
+    margin-right: 0;
+    margin-top: calc(var(--unit) * -8);
+}
+
+body.ui-mobile .instagram-post img {
+    height: calc(var(--unit) * 165);
+}
+
+body.ui-mobile .insta-title {
+    font-size: calc(var(--unit) * 26);
+    line-height: calc(var(--unit) * 35);
+}
+
+body.ui-mobile .insta-title span {
+    padding-left: 0;
+}
+
+body.ui-mobile .aventages-warpper [class*="col-"]:not(:last-child) .aventage-box {
+    border-bottom: 1px solid #C4C4C4;
+    padding-bottom: calc(var(--unit) * 30);
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .footer-infos {
+    text-align: center;
+    margin: calc(var(--unit) * 70) 0px;
+}
+
+body.ui-mobile .footer-payment-way {
+    text-align: center;
+}
+
+body.ui-mobile header.ui-header.light-header::after {
+    width: calc(100% - calc(var(--unit) * 52));
+    position: absolute;
+    right: calc(var(--unit) * calc(var(--unit) * 26));
+    left: calc(var(--unit) * calc(var(--unit) * 26));
+    border-bottom: 1px solid rgba(35, 44, 101, 0.31);
+}
+
+body.ui-mobile header.ui-header.light-header::before {
+    display: none;
+}
+
+
+/*---------- shop -------- */
+
+body.ui-mobile .shop-page-head {
+    margin-bottom: calc(var(--unit) * 60);
+    margin-top: calc(var(--unit) * 31);
+}
+
+body.ui-mobile .ui-breadcrumb {
+    justify-content: start;
+}
+
+body.ui-mobile .shop-page-filters {
+    justify-content: space-between;
+}
+
+body.ui-mobile .shop-page-head .filter-by {
+    padding: 0;
+}
+
+body.ui-mobile .shop-page-head .sort-by {
+    padding: 0;
+}
+
+body.ui-mobile .shop-page-head .shop-page-title {
+    font-size: calc(var(--unit) * 37);
+    line-height: calc(var(--unit) * 53);
+}
+
+body.ui-mobile .shop-page .products .row {
+    margin-right: calc(var(--unit) * -14);
+    margin-left: calc(var(--unit) * -14);
+}
+
+body.ui-mobile .shop-page .products .row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 14);
+    padding-left: calc(var(--unit) * 14);
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+body.ui-mobile .products .product-box img {
+    height: calc(var(--unit) * 231);
+}
+
+body.ui-mobile .products .product-title {
+    margin-bottom: calc(var(--unit) * 10);
+}
+
+body.ui-mobile .page-root.shop-page {
+    padding-top: calc(var(--unit) * 80);
+}
+
+
+/*---------- Produit -------- */
+
+body.ui-mobile .single-product-gallery img {
+    height: calc(var(--unit) * 431);
+}
+
+body.ui-mobile .single-product-warpper .p-title {
+    font-size: calc(var(--unit) * 23);
+    line-height: calc(var(--unit) * 37);
+}
+
+body.ui-mobile .single-product-warpper .single-product-price {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 21);
+}
+
+body.ui-mobile .product-attrs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body.ui-mobile .single-product-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body.ui-mobile .qte-controller {
+    margin-right: 0;
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+body.ui-mobile .single-product-footer .ui-btn {
+    width: 100%;
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+body.ui-mobile .shipping-infos-box {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body.ui-mobile .sib-details {
+    text-align: center;
+    width: 100%;
+}
+
+body.ui-mobile .shipping-infos-box img {
+    width: calc(var(--unit) * 51);
+    height: calc(var(--unit) * 51);
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+body.ui-mobile .sib-details p {
+    font-size: calc(var(--unit) * 15);
+    line-height: calc(var(--unit) * 25);
+}
+
+body.ui-mobile .shipping-infos>.container>.row [class*="col-"]:first-child .shipping-infos-box {
+    border-bottom: 1px solid #C4C4C4;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+body.ui-mobile .more-products .row {
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+body.ui-mobile .more-products .row>[class*="col-"] {
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+body.ui-mobile h2.mp-title {
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 51);
+    padding-left: 11px;
+}
+
+body.ui-mobile .more-products.best-sellers {
+    padding-top: 0;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/*---------- Contact -------- */
+
+body.ui-mobile.internal-page {
+    padding-top: calc(var(--unit) * 80);
+}
+
+body.ui-mobile .contact-title {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 45);
+    margin: calc(var(--unit) * 40) 0px;
+}
+
+body.ui-mobile .contact-warpper::after {
+    display: none;
+}
+
+body.ui-mobile .contact-form {
+    padding: calc(var(--unit) * 45) calc(var(--unit) * 26) calc(var(--unit) * 45) calc(var(--unit) * 26);
+    background: #FAFAFA;
+    margin: 0 calc(var(--unit) * -26);
+}
+
+body.ui-mobile .contact-form input.ui-btn {
+    width: 100%;
+}
+
+body.ui-mobile .contact-warpper {
+    position: relative;
+    margin-bottom: 0;
+}
+
+
+/*---------- About -------- */
+
+body.ui-mobile .internal-banner {
+    height: calc(var(--unit) * 247);
+}
+
+body.ui-mobile .insider-banner-content h2 {
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 47);
+}
+
+body.ui-mobile .insider-banner-content {
+    padding-bottom: calc(var(--unit) * 20);
+}
+
+body.ui-mobile .about-content h2 {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 45);
+}
+
+body.ui-mobile .about-content h5 {
+    font-size: calc(var(--unit) * 17);
+    line-height: calc(var(--unit) * 35);
+    margin-bottom: 30px;
+}
+
+body.ui-mobile .about-content-warpper {
+    margin-top: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .about-avatar img {
+    height: calc(var(--unit) * 373);
+}
+
+body.ui-mobile .about-content-warpper>.container>.row {
+    margin-right: calc(var(--unit) * -15);
+    margin-left: calc(var(--unit) * -15);
+}
+
+body.ui-mobile .about-content-warpper>.container>.row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 15);
+    padding-left: calc(var(--unit) * 15);
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+
+/*---------- Formation -------- */
+
+body.ui-mobile .formation-img img {
+    height: calc(var(--unit) * 163);
+}
+
+body.ui-mobile .certification-content {
+    padding: calc(var(--unit) * 65) calc(var(--unit) * 15);
+}
+
+body.ui-mobile .certification-warpper {
+    padding: calc(var(--unit) * 26);
+}
+
+body.ui-mobile .certification-content h2 {
+    font-size: calc(var(--unit) * 27);
+    line-height: calc(var(--unit) * 45);
+    padding-bottom: calc(var(--unit) * 30);
+    margin-bottom: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .certification-container {
+    padding: calc(var(--unit) * 15);
+}
+
+body.ui-mobile .certification-container .corner-1 {
+    left: calc(var(--unit) * -4);
+    top: calc(var(--unit) * -4);
+    border-radius: 0px 0px calc(var(--unit) * 40) 0px;
+}
+
+body.ui-mobile .certification-container .corner-2 {
+    right: calc(var(--unit) * -4);
+    top: calc(var(--unit) * -4);
+    border-radius: 0px 0px 0px calc(var(--unit) * 40);
+}
+
+body.ui-mobile .certification-container .corner-3 {
+    left: calc(var(--unit) * -4);
+    bottom: calc(var(--unit) * -4);
+    border-radius: 0px calc(var(--unit) * 40) 0px 0px;
+}
+
+body.ui-mobile .certification-container .corner-4 {
+    right: calc(var(--unit) * -4);
+    bottom: calc(var(--unit) * -4);
+    border-radius: calc(var(--unit) * 40) 0px 00px 0px;
+}
+
+body.ui-mobile .certification-container [class*="corner-"] {
+    width: calc(var(--unit) * 70);
+    height: calc(var(--unit) * 70);
+    border: calc(var(--unit) * 20) solid #000000;
+}
+
+
+/*---------- dermopigmentation -------- */
+
+body.ui-mobile .dermopigmentation-intro .desc-block {
+    padding-right: 0;
+    margin-top: calc(var(--unit) * 0);
+}
+
+body.ui-mobile .dermo-intro-img img {
+    height: calc(var(--unit) * 246);
+    width: 100%;
+}
+
+body.ui-mobile .dermo-block2-intro-img img {
+    height: calc(var(--unit) * 389);
+    width: 100%;
+    margin-top: calc(var(--unit) * 30);
+}
+
+body.ui-mobile .dermopigmentation-type-box img {
+    width: calc(var(--unit) * 64);
+    height: calc(var(--unit) * 64);
+    margin-bottom: calc(var(--unit) * 20);
+    margin-top: calc(var(--unit) * 20);
+    object-fit: contain;
+}
+
+body.ui-mobile .dermopigmentation-type-box p {
+    font-size: calc(var(--unit) * 11);
+    line-height: calc(var(--unit) * 27);
+}
+
+body.ui-mobile .dermopigmentation-type-box h5 {
+    font-size: calc(var(--unit) * 11);
+    line-height: calc(var(--unit) * 27);
+    margin-bottom: calc(var(--unit) * 25);
+}
+
+body.ui-mobile .dermopigmentation-type-box {
+    padding: calc(var(--unit) * 11);
+}
+
+body.ui-mobile .dermopigmentation-types-container {
+    padding: 0 calc(var(--unit) * 0);
+}
+
+body.ui-mobile .dermopigmentation-type-box .ui-btn {
+    padding: calc(var(--unit) * 5) calc(var(--unit) * 15);
+    font-size: calc(var(--unit) * 11);
+    line-height: calc(var(--unit) * 27);
+    width: 100%;
+}
+
+body.ui-mobile .dermopigmentation-types {
+    padding: calc(var(--unit) * 70) 0px;
+}

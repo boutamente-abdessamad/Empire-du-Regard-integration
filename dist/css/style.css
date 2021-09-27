@@ -500,7 +500,6 @@ body.internal-page header.ui-header.light-header .main-logo {
     font-weight: normal;
     font-size: calc(var(--unit) * 15);
     line-height: calc(var(--unit) * 27);
-    display: flex;
     letter-spacing: 0.07em;
     color: #FFFFFF;
 }
@@ -517,6 +516,11 @@ body.internal-page header.ui-header.light-header .main-logo {
 
 .media-social li {
     padding: 0 calc(var(--unit) * 8);
+}
+
+.media-social li a img {
+    width: calc(var(--unit) * 22);
+    height: calc(var(--unit) * 22);
 }
 
 .footer-logo {
@@ -1458,7 +1462,6 @@ body.internal-page header.ui-header.light-header .main-logo {
     font-weight: 500;
     font-size: calc(var(--unit) * 17);
     line-height: calc(var(--unit) * 53);
-    display: flex;
     align-items: center;
     letter-spacing: 0.07em;
     text-transform: uppercase;
@@ -1472,8 +1475,6 @@ body.internal-page header.ui-header.light-header .main-logo {
     font-weight: normal;
     font-size: calc(var(--unit) * 15);
     line-height: calc(var(--unit) * 23);
-    display: flex;
-    align-items: center;
     letter-spacing: 0.05em;
     color: rgba(0, 0, 0, 0.65);
     margin-bottom: 0;
