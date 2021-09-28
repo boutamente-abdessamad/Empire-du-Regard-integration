@@ -517,7 +517,7 @@ body.ui-mobile .internal-banner {
 
 body.ui-mobile .insider-banner-content h2 {
     font-size: calc(var(--unit) * 27);
-    line-height: calc(var(--unit) * 47);
+    line-height: calc(var(--unit) * 35);
 }
 
 body.ui-mobile .insider-banner-content {
@@ -665,4 +665,118 @@ body.ui-mobile .dermopigmentation-type-box .ui-btn {
 
 body.ui-mobile .dermopigmentation-types {
     padding: calc(var(--unit) * 70) 0px;
+}
+
+
+/*---------- dermopigmentation reparatrice -------- */
+
+body.ui-mobile .dermo-reparatrice-intro-img img {
+    height: calc(var(--unit) * 311);
+}
+
+body.ui-mobile .dr-techniques-title {
+    margin-top: calc(var(--unit) * -47);
+    padding-top: calc(var(--unit) * 92);
+    padding-bottom: calc(var(--unit) * 45);
+    margin-bottom: 0;
+}
+
+body.ui-mobile .dr-techniques-title h2 {
+    font-size: calc(var(--unit) * 33);
+    line-height: calc(var(--unit) * 51);
+    text-align: center;
+}
+
+body.ui-mobile .dermo-reparatrice-techniques>.container>.row .desc-block {
+    padding-left: 0;
+}
+
+body.ui-mobile .dermo-reparatrice-techniques>.container>.row:nth-child(2n+2) .desc-block {
+    padding-left: 0px;
+    padding-right: 0;
+}
+
+body.ui-mobile .dermo-reparatrice-technique-title {
+    margin: 0 calc(var(--unit) * -26);
+}
+
+body.ui-mobile .dermo-reparatrice-technique-title {
+    padding: calc(var(--unit) * 67.5) calc(var(--unit) * 45);
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+body.ui-mobile .dermo-reparatrice-techniques>.container>.row {
+    align-items: center;
+    margin-bottom: calc(var(--unit) * 40);
+}
+
+body.ui-mobile .dermopigmentation-des-sourcils-page .dr-techniques-title,
+body.ui-mobile .dermopigmentation-levres-page .dr-techniques-title,
+body.ui-mobile .dermopigmentation-yeux-page .dr-techniques-title {
+    margin-top: calc(var(--unit) * 30);
+    padding-top: calc(var(--unit) * 46);
+    padding-bottom: calc(var(--unit) * 92);
+    margin-bottom: 0;
+}
+
+body.ui-mobile .dermo-sourcils-intro-img img {
+    height: calc(var(--unit) * 235);
+    width: 100%;
+    margin-top: calc(var(--unit) * -103);
+    margin-bottom: 30px;
+}
+
+body.ui-mobile .d-sourcils-b3-content h2 {
+    font-size: calc(var(--unit) * 23);
+    line-height: calc(var(--unit) * 40);
+    margin-bottom: calc(var(--unit) * 24);
+}
+
+body.ui-mobile .d-sourcils-b3-content {
+    margin-bottom: 30px;
+}
+
+body.ui-mobile .dermopigmentation-before-after>.container>.row {
+    margin-right: calc(var(--unit) * -15);
+    margin-left: calc(var(--unit) * -15);
+}
+
+body.ui-mobile .dermopigmentation-before-after>.container>.row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 15);
+    padding-left: calc(var(--unit) * 15);
+}
+
+body.ui-mobile .dermopigmentation-change-box {
+    height: calc(var(--unit) * 231);
+}
+
+body.ui-mobile .dermopigmentation-change-box span {
+    font-size: calc(var(--unit) * 13);
+    line-height: calc(var(--unit) * 51);
+    width: calc(var(--unit) * 83);
+    height: calc(var(--unit) * 83);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: calc(var(--unit) * -41.5);
+}
+
+body.ui-mobile .dermopigmentation-before-after {
+    padding-top: 0;
+    padding: calc(var(--unit) * 40) 0px;
+}
+
+body.ui-mobile .dermopigmentation-sourcils-block-3 {
+    padding-bottom: 0;
+}
+
+body.ui-mobile .dermopigmentation-sourcils-block-3>.container>.row {
+    align-items: center;
+    margin-right: calc(var(--unit) * -15);
+    margin-left: calc(var(--unit) * -15);
+}
+
+body.ui-mobile .dermopigmentation-sourcils-block-3>.container>.row>[class*="col-"] {
+    padding-right: calc(var(--unit) * 15);
+    padding-left: calc(var(--unit) * 15);
 }
