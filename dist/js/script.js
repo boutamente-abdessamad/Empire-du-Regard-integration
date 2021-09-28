@@ -11,6 +11,10 @@ $(document).ready(() => {
 
         /* do your magic here*/
 
+        $('.toggle-menu-mobile').click(function(e) {
+            e.preventDefault();
+            $('body').toggleClass('menu-in');
+        })
 
         // best-sellers script 
 
@@ -79,6 +83,19 @@ $(document).ready(() => {
         $('.has-children').click(function(e){
             e.preventDefault();
             $(this).toggleClass('in');
+        } )
+        $('.shop-toggle-menu-mobile').click(function(e){
+            e.preventDefault();
+            $('.mobile-menu').toggleClass('menu-shop-in');
+        } )
+        $('.services-toggle-menu-mobile').click(function(e){
+            e.preventDefault();
+            $('.mobile-menu').toggleClass('menu-services-in');
+        } )
+        $('.menu-mobile-back').click(function(e){
+            e.preventDefault();
+            $('.mobile-menu').removeClass('menu-shop-in');
+            $('.mobile-menu').removeClass('menu-services-in');
         } )
 
         $('.shop-submenu-toggle').click(function(e){
