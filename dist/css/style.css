@@ -328,6 +328,11 @@ header.ui-header {
     align-items: center;
     padding: calc(var(--unit) * 23) calc(var(--unit) * 65);
     justify-content: space-between;
+    transition: .2s all cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+header.ui-header.hide-header {
+    transform: translateY( calc(var(--unit) * -105));
 }
 
 .is-scrolling header.ui-header {

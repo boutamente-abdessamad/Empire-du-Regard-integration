@@ -29,6 +29,12 @@ body.ui-mobile header.ui-header {
     padding: calc(var(--unit) * 26) calc(var(--unit) * 26);
 }
 
+header.ui-header.hide-header {
+    transform: translateY( calc(var(--unit) * -80));
+    opacity: 0;
+    visibility: hidden;
+}
+
 body.ui-mobile .main-logo {
     width: calc(var(--unit) * 206);
     height: calc(var(--unit) * 73);
